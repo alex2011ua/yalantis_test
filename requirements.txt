@@ -1,5 +1,6 @@
 asgiref==3.4.1
 Django==4.0
 djangorestframework==3.12.4
+python-dotenv==0.19.2
 sqlparse==0.4.2
 tzdata==2021.5
