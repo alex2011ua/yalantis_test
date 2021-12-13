@@ -9,7 +9,6 @@ class DriverListCreateView(generics.CreateAPIView, generics.ListAPIView):
     serializer_class = DriverSerializer
     queryset = Driver.objects.all()
 
-
     def get(self, request, *args, **kwargs):
         if request.GET.get('created_at__gte'):
             date = datetime.datetime.strptime(request.GET.get('created_at__gte'), "%d-%m-%Y")
