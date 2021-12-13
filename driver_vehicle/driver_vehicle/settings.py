@@ -123,6 +123,8 @@ USE_TZ = True
 
 REST_FRAMEWORK = {
     'DATETIME_FORMAT':  "%d/%m/%Y %H:%M:%S",
+    'DEFAULT_PERMISSION_CLASSES': [],
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json'
 }
 
 # Static files (CSS, JavaScript, Images)
