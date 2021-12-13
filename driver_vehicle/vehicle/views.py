@@ -22,6 +22,8 @@ class VehicleRUD(generics.RetrieveUpdateDestroyAPIView):
 
 
 class VehicleSetDriver(generics.UpdateAPIView):
+    serializer_class = VehicleSerializer
+    queryset = Vehicle.objects.all()
 
     def post(self, request, *args, **kwargs):
         return self.partial_update(request, *args, **kwargs)
