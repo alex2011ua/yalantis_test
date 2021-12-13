@@ -1,11 +1,11 @@
-from django.urls import path, include
+from django.urls import path
 from . import views
-from rest_framework import routers
-
-router = routers.DefaultRouter()
-router.register("vehicle", views.Vehicle)
 
 
+app_name = 'vehicle'
 urlpatterns = [
-    path("", include(router.urls)),
+    path('vehicle/', views.VehicleListCreateView.as_view()),
+    path('vehicle/<int:pk>/', views.VehicleRUD.as_view()),
+    path('set_driver/<int:pk>/', views.VehicleSetDriver.as_view()),
+
 ]
