@@ -22,6 +22,3 @@ class DriverListCreateView(generics.CreateAPIView, generics.ListAPIView):
 class DriverRUD(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = DriverSerializer
     queryset = Driver.objects.all()
-
-
-
